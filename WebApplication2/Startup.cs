@@ -50,6 +50,13 @@ namespace MVCPeople
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapRazorPages();
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=pg}/{action=Index}/{id?}");
+            });
         }
     }
 }
